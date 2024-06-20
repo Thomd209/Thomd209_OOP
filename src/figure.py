@@ -2,6 +2,17 @@ from abc import ABC, abstractmethod
 
 
 class Figure(ABC):
+
+    def check_on_positive_values(self, *args):
+        for n in args:
+            if n <= 0:
+                raise ValueError("Side can not be less or equal than zero")
+
+    def check_on_whole_numbers(self, *args):
+        for n in args:
+            if not isinstance(n, int):
+                raise ValueError("Side should be a whole number")
+
     @abstractmethod
     def get_area(self):
         pass

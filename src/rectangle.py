@@ -3,8 +3,8 @@ from figure import Figure
 
 class Rectangle(Figure):
     def __init__(self, width, height):
-        if width < 0 or height < 0:
-            raise ValueError("Side can not be less than zero")
+        self.check_on_positive_values(width, height)
+        self.check_on_whole_numbers(width, height)
         self.width = width
         self.height = height
 

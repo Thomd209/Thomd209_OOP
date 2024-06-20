@@ -5,8 +5,8 @@ from figure import Figure
 
 class Triangle(Figure):
     def __init__(self, a, b, c):
-        if a < 0 or b < 0 or c < 0:
-            raise ValueError("Side can not be less than zero")
+        self.check_on_positive_values(a, b, c)
+        self.check_on_whole_numbers(a, b, c)
         if self.check_existence(a, b, c) != "Triangle can not exist":
             self.a = a
             self.b = b
