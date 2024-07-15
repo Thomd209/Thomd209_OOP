@@ -7,10 +7,7 @@ class Triangle(Figure):
     def __init__(self, a, b, c):
         self.check_on_positive_values(a, b, c)
         self.check_on_whole_numbers(a, b, c)
-        if self.check_existence(a, b, c) != "Triangle can not exist":
-            self.a = a
-            self.b = b
-            self.c = c
+        self.check_existence(a, b, c)
 
     def check_existence(self, a, b, c):
         if a + b < c or a + c < b or b + c < a:
