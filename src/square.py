@@ -3,8 +3,8 @@ from figure import Figure
 
 class Square(Figure):
     def __init__(self, width):
-        self.check_on_positive_values(width)
         self.check_on_whole_numbers(width)
+        self.check_on_positive_values(width)
         self.width = width
 
     @property

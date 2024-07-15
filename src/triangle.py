@@ -5,8 +5,11 @@ from figure import Figure
 
 class Triangle(Figure):
     def __init__(self, a, b, c):
-        self.check_on_positive_values(a, b, c)
+        self.a = a
+        self.b = b
+        self.c = c
         self.check_on_whole_numbers(a, b, c)
+        self.check_on_positive_values(a, b, c)
         self.check_existence(a, b, c)
 
     def check_existence(self, a, b, c):
