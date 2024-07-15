@@ -3,8 +3,8 @@ from figure import Figure
 
 class Circle(Figure):
     def __init__(self, radius):
-        self.check_on_positive_values(radius)
         self.check_on_whole_numbers(radius)
+        self.check_on_positive_values(radius)
         self.radius = radius
 
     @property

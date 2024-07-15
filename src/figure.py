@@ -11,7 +11,7 @@ class Figure(ABC):
 
     def check_on_whole_numbers(self, *args):
         for n in args:
-            if not isinstance(n, int) and not isinstance(n, bool):
+            if not isinstance(n, int) or isinstance(n, bool):
                 raise ValueError("Side should be a whole number")
 
     @abstractmethod
