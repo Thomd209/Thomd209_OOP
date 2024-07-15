@@ -18,7 +18,7 @@ class TestTriangle:
     @pytest.mark.parametrize("a, b, c", [(1, 2, 3), (2, 3, 5)])
     def test_whole_numbers(self, a, b, c):
         assert Triangle(a, b, c)
-
+.
     @pytest.mark.parametrize("a, b, c", [(True, 1, 1), (False, 3, 2), (5.1, 3, 6), (7, 7, "figure"), ([1, 2, 3], 5, 1),
                                          (9, 2, (4, 5, 6)), (15, 3, {"1": 3})])
     def test_bad_types(self, a, b, c):
